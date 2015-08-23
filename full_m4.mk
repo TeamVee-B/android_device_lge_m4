@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,9 +11,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := $(call my-dir)
+# Inherit device configuration
+$(call inherit-product, device/lge/m4/device.mk)
 
-ifeq ($(TARGET_DEVICE),m4)
-	include $(call all-makefiles-under,$(LOCAL_PATH))
-endif
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := m4
+PRODUCT_NAME := full_m4
+PRODUCT_BRAND := LGE
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_MODEL := L5
+PRODUCT_RELEASE_NAME := L5

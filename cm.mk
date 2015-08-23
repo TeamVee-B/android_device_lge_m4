@@ -11,24 +11,27 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# Boot animation
+#
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lge/e610/full_e610.mk)
+$(call inherit-product, device/lge/m4/device.mk)
 
 TARGET_SCREEN_HEIGHT := 480
 TARGET_SCREEN_WIDTH := 320
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := e610
-PRODUCT_NAME := cm_e610
-PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-E610
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := m4
+PRODUCT_NAME := cm_m4
+PRODUCT_BRAND := LGE
 PRODUCT_MANUFACTURER := LGE
-PRODUCT_CHARACTERISTICS := phone
+PRODUCT_MODEL := L5
+PRODUCT_RELEASE_NAME := L5
