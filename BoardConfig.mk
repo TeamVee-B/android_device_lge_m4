@@ -35,3 +35,10 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/lge/m4/recovery/graphics.c
 TARGET_RECOVERY_FSTAB := device/lge/m4/rootdir/fstab.m4
 #TARGET_RECOVERY_FSTAB := device/lge/m4/recovery/recovery.fstab
 
+# OTA Assert
+TARGET_OTA_ASSERT_DEVICE := E610,E612,E617,m4
+
+# Set Device in init based on baseband
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_m4
+TARGET_LIBINIT_DEFINES_FILE := device/lge/m4/init/init_m4.c
