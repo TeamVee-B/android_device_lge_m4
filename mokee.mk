@@ -13,8 +13,8 @@
 # limitations under the License.
 #
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common MK stuff.
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -30,7 +30,7 @@ TARGET_SCREEN_WIDTH := 320
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m4
-PRODUCT_NAME := cm_m4
+PRODUCT_NAME := mk_m4
 PRODUCT_BRAND := LGE
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_MODEL := m4
